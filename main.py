@@ -50,7 +50,7 @@ async def _8ball(ctx, *, question):
     await ctx.send(f'Questions: {question}\nAnswer: {random.choice(responses)}')
 
 @client.command()
-async def _help(ctx):
+async def kamihelp(ctx):
     await ctx.send(f'''Hey how are you {ctx.author}?
                     So... The prefix command is a dot `.` 
                     and the commands that you can use are `.kamisama` or `.8ball`''')
