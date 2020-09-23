@@ -49,6 +49,8 @@ async def _8ball(ctx, *, question):
                 "Very doubtful."]
     await ctx.send(f'Questions: {question}\nAnswer: {random.choice(responses)}')
 
+#help command
+
 @client.command()
 async def kamihelp(ctx):
     await ctx.send(f'''Hey how are you {ctx.author.name}?
