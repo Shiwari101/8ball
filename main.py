@@ -55,6 +55,4 @@ async def _help(ctx):
                     So... The prefix command is a dot `.` 
                     and the commands that you can use are `.kamisama` or `.8ball`''')
 
-
-
-client.run(os.environ'8BALL_TOKEN')
+client.run('NzU4MDI3MTQ2ODUyODI3Mzk3.X2o9yw.A9HwTfZKQNLPEMQ7nW1nWX8bzzU')
