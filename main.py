@@ -15,7 +15,7 @@ async def on_ready():
 
 @client.command()
 async def hey(ctx):
-    await ctx.send(f'Hey how are you {ctx.author}?')
+    await ctx.send(f'Hey how are you {ctx.author.name}?')
 
 ##commando para ver a latencia é importante mas não vou manter e vou guardar tbm
 
