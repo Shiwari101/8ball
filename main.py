@@ -9,6 +9,7 @@ client = commands.Bot(command_prefix = '.')
 
 @client.event
 async def on_ready():
+    await client.change_presence(status=discord.Status.online, activity=discord.Game('.kamihelp'))
     print(f'Ok {client.user.name} is Online')
 
 #.hey é para solitarios como eu que tem seu amigo por um comando
