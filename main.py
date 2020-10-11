@@ -58,9 +58,9 @@ async def flip(ctx):
 
 @client.command()
 async def dice(ctx):
-    dice = ['1','2','3', '4', '5', '6']
+    dice = ['1','2','3', '4', '5', '6','7', '8', '9' ,'10', '12']
     await ctx.send('You roll a dice and...')
-    asyncio.sleep(50)
+    await asyncio.sleep(5)
     await ctx.send(f'{ctx.author.name}\nYou rolled {random.choice(dice)}')
 
 @client.command()
@@ -82,6 +82,6 @@ So... The prefix command is a dot `.`
 and the commands that you can use are `.kamisama` or `.8ball` and make your question right after
 
 added the Flip a coin, Dice feature aswell with rock paper scissors
-`.flip` `.dice` `.jokenpo` are commands. Fun fact we have a fun fact command too! Just type `.funfact`! ''')
+`.flip` `.dice` `.jokenpo` are commands. Fun fact we have a fun fact command too! Just type `.funfact` ! ''')
 
 client.run('NzU4MDI3MTQ2ODUyODI3Mzk3.X2o9yw.A9HwTfZKQNLPEMQ7nW1nWX8bzzU')
