@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 import os
-
+import asyncio
 client = commands.Bot(command_prefix = '.')
 
 ##LINKU STARTOO
@@ -50,12 +50,38 @@ async def _8ball(ctx, *, question):
                 "Very doubtful."]
     await ctx.send(f'Questions: {question}\nAnswer: {random.choice(responses)}')
 
+##coin flip roll dice and jokenpo
+@client.command()
+async def flip(ctx):
+    sides = ['Heads', 'Tails']
+    await ctx.send(f'Hey {ctx.author.name}! You got {random.choice(sides)}')
+
+@client.command()
+async def dice(ctx):
+    dice = ['1','2','3', '4', '5', '6']
+    await ctx.send('You roll a dice and...')
+    asyncio.sleep(5)
+    await ctx.send(f'{ctx.author.name}\nYou rolled {random.choice(dice)}')
+
+@client.command()
+async def jokenpo(ctx):
+    hands = ['Rock', 'Paper', 'Scissors']
+    await ctx.send(f'{ctx.author.name} Chose {random.choice(hands)}')
+
+@client.command()
+async def funfact(ctx):
+    fun_facts = ['You can send Shiwa some fun facts suggestions, Just DM him)',
+                'We call Rock Papers Scissors, Jokenpo in Brazil just like in Japan!']
+    await ctx.send(f'Fun fact: {random.choice(fun_facts)}')
 #help command
 
 @client.command()
 async def kamihelp(ctx):
     await ctx.send(f'''Hey how are you {ctx.author.name}?
 So... The prefix command is a dot `.` 
-and the commands that you can use are `.kamisama` or `.8ball` and make your question right after''')
+and the commands that you can use are `.kamisama` or `.8ball` and make your question right after
+
+added the Flip a coin, Dice feature aswell with rock paper scissors
+`.flip` `.dice` `.jokenpo` are commands. Fun fact we have a fun fact command too! Just type `funfact`! ''')
 
 client.run('NzU4MDI3MTQ2ODUyODI3Mzk3.X2o9yw.A9HwTfZKQNLPEMQ7nW1nWX8bzzU')
