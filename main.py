@@ -3,6 +3,7 @@ from discord.ext import commands
 import random
 import os
 import asyncio
+
 client = commands.Bot(command_prefix = '.')
 
 ##LINKU STARTOO
@@ -58,7 +59,7 @@ async def flip(ctx):
 
 @client.command()
 async def dice(ctx):
-    dice = ['1','2','3', '4', '5', '6','7', '8', '9' ,'10', '12']
+    dice = ['1','2','3', '4', '5', '6', '7', '8', '9', '10', '12']
     await ctx.send('You roll a dice and...')
     await asyncio.sleep(5)
     await ctx.send(f'{ctx.author.name}\nYou rolled {random.choice(dice)}')
@@ -73,6 +74,30 @@ async def funfact(ctx):
     fun_facts = ['You can send Shiwa some fun facts suggestions, Just DM him ;)',
                 'We call Rock Papers Scissors, Jokenpo in Brazil just like in Japan!']
     await ctx.send(f'Fun fact: {random.choice(fun_facts)}')
+
+
+### calculator
+@client.command() 
+async def add(ctx,a:int,b:int): 
+    await ctx.send(f'Ok {a} + {b} = {a+b}')
+
+@client.command() 
+async def sub(ctx,a:int,b:int): 
+    await ctx.send(f'Ok {a} - {b} = {a-b}')
+
+@client.command() 
+async def multiply(ctx,a:int,b:int): 
+    await ctx.send(f'Ok {a} X {b} = {a*b}')
+
+@client.command()
+async def divide(ctx,a:int,b:int):
+    await ctx.send(f'Ok {a} / {b} = {a/b}')
+
+@client.command()
+async def power(ctx,a:int,b:int):
+    await ctx.send(f'Ok {a} to the power of {b} = {a**b}')
+
+
 #help command
 
 @client.command()
