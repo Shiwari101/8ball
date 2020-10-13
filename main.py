@@ -72,7 +72,9 @@ async def jokenpo(ctx):
 @client.command()
 async def funfact(ctx):
     fun_facts = ['You can send Shiwa some fun facts suggestions, Just DM him ;)',
-                'We call Rock Papers Scissors, Jokenpo in Brazil just like in Japan!']
+                'We call Rock Papers Scissors, Jokenpo in Brazil just like in Japan!,'
+                'Piranha in brazil can be understand as a fish from Amazonas or as a whore/bitch']
+                
     await ctx.send(f'Fun fact: {random.choice(fun_facts)}')
 
 
@@ -93,20 +95,33 @@ async def multiply(ctx,a:int,b:int):
 async def divide(ctx,a:int,b:int):
     await ctx.send(f'Ok {a} / {b} = {a/b}')
 
-@client.command()
-async def power(ctx,a:int,b:int):
-    await ctx.send(f'Ok {a} to the power of {b} = {a**b}')
-
 
 #help command
 
 @client.command()
 async def kamihelp(ctx):
-    await ctx.send(f'''Hey how are you {ctx.author.name}?
-So... The prefix command is a dot `.` 
-and the commands that you can use are `.kamisama` or `.8ball` and make your question right after
+    embed = discord.Embed(title = f'Hey {ctx.author.name}. Can I help you?',
+                         description = '''Ok... The prefix command is a dot `.` 
+and the commands that you can use are `.kamisama` and make your question right after.
 
-added the Flip a coin, Dice feature aswell with rock paper scissors
-`.flip` `.dice` `.jokenpo` are commands. Fun fact we have a fun fact command too! Just type `.funfact` ! ''')
+You can Flip a coin, Roll a Dice and Play Rock Paper Scissors too.
+You can use: `.flip` `.dice` `.jokenpo`
+
+Fun fact we have a fun fact command too! Just type `.funfact` to get one! 
+                                            
+If you have any question or suggestions you can DM Shiwa. Thanks for using kamisama!''',
+
+    colour = discord.Colour.blue()) 
+    
+    await ctx.send(embed=embed)
+
+
+
+
+
+
+
+
+
 
 client.run('NzU4MDI3MTQ2ODUyODI3Mzk3.X2o9yw.A9HwTfZKQNLPEMQ7nW1nWX8bzzU')
