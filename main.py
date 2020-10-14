@@ -22,7 +22,7 @@ async def hey(ctx):
 ##commando para ver a latencia 
 
 @client.command()
-async def lag(ctx):
+async def ping(ctx):
     embed = discord.Embed(title = f'''Pong! {round(client.latency * 1000)}ms''', colour = discord.Colour.blue())
     await ctx.send(embed=embed)  
 
