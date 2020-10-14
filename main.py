@@ -19,12 +19,12 @@ async def on_ready():
 async def hey(ctx):
     await ctx.send(f'Hey how are you {ctx.author.name}?')
 
-##commando para ver a latencia é importante mas não vou manter e vou guardar tbm
+##commando para ver a latencia 
 
 @client.command()
 async def ping(ctx):
-    embed1 = discord.Embed(title = f'{round(client.latency * 1000)}ms'')
-    await ctx.send(embed=embed1)
+    embed1 = discord.Embed(title = f'Pong! {round(client.latency * 1000)}ms', colour = discord.Coulor.blue())
+    await ctx.send(embed=embed1)  
 
 ##Comando do 8ball eu vou deixar isso de lado depois no final do dia e vou separar o codigo dele pra estudo
 
