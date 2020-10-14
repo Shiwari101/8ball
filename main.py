@@ -111,16 +111,8 @@ Fun fact we have a fun fact command too! Just type `.funfact` to get one!
                                             
 If you have any question or suggestions you can DM Shiwa. Thanks for using kamisama!''',
 
-    colour = discord.Colour.blue()) 
-    
+    colour = discord.Colour.blue())
     await ctx.send(embed=embed)
-
-
-
-
-
-
-
 
 
 
