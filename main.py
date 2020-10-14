@@ -22,8 +22,8 @@ async def hey(ctx):
 ##commando para ver a latencia 
 
 @client.command()
-async def ping(ctx):
-    embed = discord.Embed(title = f'''Pong! {round(client.latency * 1000)}ms''', colour = discord.Coulor.blue())
+async def lag(ctx):
+    embed = discord.Embed(title = f'''Pong! {round(client.latency * 1000)}ms''', colour = discord.Colour.blue())
     await ctx.send(embed=embed)  
 
 ##Comando do 8ball eu vou deixar isso de lado depois no final do dia e vou separar o codigo dele pra estudo
