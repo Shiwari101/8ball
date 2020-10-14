@@ -23,8 +23,11 @@ async def hey(ctx):
 
 @client.command()
 async def ping(ctx):
-    embed = discord.Embed(title = f'''Pong! {round(client.latency * 1000)}ms''', colour = discord.Coulor.blue())
+    embed = discord.Embed(title = f'''Pong! {round(client.latency * 1000)}ms''', colour = discord.Colour.blue())
     await ctx.send(embed=embed)  
+
+#############eu quero moreeewwwwweeeeerrrrrrrrrrrrr
+######DJKLFLSDFGHUASHKUJDFGHKLSDJF\HKLJ\SDFLHKJU\SDFLKGJUH\SDULFGIU\SDFGUI\DSFGUIH FILHUDAPUTAAAAAAAAAAAAAAAAAAAA
 
 ##Comando do 8ball eu vou deixar isso de lado depois no final do dia e vou separar o codigo dele pra estudo
 
