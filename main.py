@@ -22,8 +22,9 @@ async def hey(ctx):
 ##commando para ver a latencia é importante mas não vou manter e vou guardar tbm
 
 @client.command()
-async def lag(ctx):
-    await ctx.send(f'Oh look! {round(client.latency * 1000)}ms')
+async def ping(ctx):
+    embed1 = discord.Embed(title = f'{round(client.latency * 1000)}ms'')
+    await ctx.send(embed=embed1)
 
 ##Comando do 8ball eu vou deixar isso de lado depois no final do dia e vou separar o codigo dele pra estudo
 
@@ -100,7 +101,7 @@ async def divide(ctx,a:int,b:int):
 
 @client.command()
 async def kamihelp(ctx):
-    embed = discord.Embed(title = f'Hey {ctx.author.name}. Can I help you?',
+    embed2 = discord.Embed(title = f'Hey {ctx.author.name}. Can I help you?',
                          description = '''Ok... The prefix command is a dot `.` 
 and the commands that you can use are `.kamisama` and make your question right after.
 
