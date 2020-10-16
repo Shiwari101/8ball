@@ -116,8 +116,10 @@ async def funfact(ctx):
                 'The giant squid has the largest eyes in the world.',
                 'Most people fall asleep in seven minutes.',
                 '"Stewardesses" is the longest word that is typed with only the left hand.']
+
+    embed = discord.Embed(title = 'Fun Fact!', description = f'{random.choice(fun_facts)}', colour = discord.Colour.blue())
                 
-    await ctx.send(f'Fun fact: {random.choice(fun_facts)}')
+    await ctx.send(embed = embed)
 
 
 ### calculator
