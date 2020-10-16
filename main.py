@@ -15,9 +15,22 @@ async def on_ready():
 
 #.hey é para solitarios como eu que tem seu amigo por um comando
 
-@client.command()
-async def hey(ctx):
-    await ctx.send(f'Hey how are you {ctx.author.name}?')
+@client.event
+async def on_message(message):
+    if message.content.startswith('.hey'):
+        channel = message.channel
+        await channel.send(f'Hey how are you {message.author.name}?')
+
+    def pred(m):
+            return m.author == message.author
+            
+    try: 
+        msg = await client.wait_for('message', timeout=30.0, check=pred)
+    except asyncio.TimeoutError:
+        await channel.send(f'''{message.author.name} why you didn't answer me? :c''')
+    else: 
+        await channel.send(f'''That's good to know''' )
+
 
 ##commando para ver a latencia 
 
