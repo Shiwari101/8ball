@@ -22,6 +22,6 @@ class Owoapi(commands.Cog):
             return
 
 def setup(client):
-    client.add_cog(owoapi(client))
+    client.add_cog(Owoapi(client))
     
 
