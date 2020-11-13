@@ -13,7 +13,7 @@ class Owoapi(commands.Cog):
     
     @commands.Cog.listener()
     async def on_message(self, message):
-        channel = client.get_channel(762359461250727997)
+        channel = self.client.get_channel(762359461250727997)
         owo_level = cactus.userlevel(717747572076314745)
 
         if owo_level == 40:
