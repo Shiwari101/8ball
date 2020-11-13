@@ -24,7 +24,7 @@ class Hey(commands.Cog):
         except asyncio.TimeoutError:
             await ctx.send(f'''{ctx.author.name} why you didn't answer me? :c''')
         else: 
-            await ctx.send(f'''Ok, if you want to talk about it, you can go to personal vent. it's a safe space''' )
+            await ctx.send(f'''Ok, if you have anything that you want to say it, you can go to personal vent. it's a safe space''' )
 
 
 
