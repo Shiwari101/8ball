@@ -16,7 +16,7 @@ class Owoapi(commands.Cog):
         channel = self.client.get_channel(762359461250727997)
         owo_level = cactus.userlevel(717747572076314745)
 
-        if owo_level == 40:
+        if owo_level == '40':
             await channel.send('this message was only possible with Cactus API made by: owoqq <3')
         else:
             return
