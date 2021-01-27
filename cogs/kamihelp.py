@@ -25,6 +25,7 @@ class Kamihelp(commands.Cog):
 
     Kamisama is working on having a integration with Cactus bot.
     So you can use the command `.level` to check your level and how many xp you have left to level up!
+    Also `.predict` to predict your level! (This is a alpha stage of thefeature. so will not be 100%)
                                                 
     If you have any question or suggestions you can DM Shiwa. Thanks for using kamisama!''', colour = discord.Colour.blue())
         await ctx.send(embed=embed)
