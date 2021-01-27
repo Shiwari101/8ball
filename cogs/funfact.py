@@ -35,10 +35,7 @@ class Funfact(commands.Cog):
 
         embed = discord.Embed(title = name, colour = discord.Colour.green())
         embed.set_image(url = url)
-<<<<<<< HEAD
-=======
 
->>>>>>> 064463aa9a6cb79fbae2ee4348e68a8bd1e35e15
         await ctx.send(embed=embed)
 
 def setup(client):
