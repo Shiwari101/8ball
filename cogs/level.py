@@ -49,16 +49,14 @@ class Level(commands.Cog):
 
         if int_xp_month > 500:
             await ctx.send(f'You are active. Keep it that way! you earned {int_xp_month} XP in tis month so far, if you keep that way you gain maybe {random_optmist_num} XP')
-        else:
-            pass
-
-        if random_optmist_num > int_nextxp:
+        elif random_optmist_num >= int_nextxp:
             await ctx.send(f'It looks like you will gain one level! and gain level {intlevel + 1} in no time. You have {int_currentxp} currently. You have to get more just {int_nextxp - int_currentxp} xp to get to level {intlevel + 1}')
         else:
             pass
 
         ## Não ativo (pessimista)
         random_pessimist_num = random.choice(pessimist_list)
+        
         if int_xp_month < 500:
             await ctx.send(f'You are not that active try to talk more in chat!, you earned {int_xp_month} in tis month so far, if you keep that way you gain maybe {random_pessimist_num} XP, if you be more active you should get {random_optmist_num}')
         else:
