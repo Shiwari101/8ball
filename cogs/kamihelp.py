@@ -15,17 +15,20 @@ class Kamihelp(commands.Cog):
     @commands.command()
     async def kamihelp(self, ctx):
         embed = discord.Embed(title = f'Hey {ctx.author.name}. Can I help you?',
-                            description = '''Ok... The prefix command is a dot `.` 
-    and the commands that you can use are `.kamisama` and make your question right after.
+                            description = '''Ok let's start... The prefix command is a dot `.` 
+    and the commands that you can use are:
+    You can use `.kamisama (Your question)` and it will respnd you.
 
     You can Flip a coin, Roll a Dice and Play Rock Paper Scissors too.
     You can use: `.flip` `.dice` `.jokenpo`
 
-    Fun fact we have a fun fact command too! Just type `.funfact` to get one!
+    Fun fact: we have a fun fact command too! Just type `.funfact` to get one!
 
     Kamisama is working on having a integration with Cactus bot.
+
     So you can use the command `.level` to check your level and how many xp you have left to level up!
-    Also `.predict` to predict your level! (This is a alpha stage of thefeature. so will not be 100%)
+    
+    Also `.predict` to predict your level! (This is the alpha stage of this feature. so this will not be accurate)
                                                 
     If you have any question or suggestions you can DM Shiwa. Thanks for using kamisama!''', colour = discord.Colour.blue())
         await ctx.send(embed=embed)

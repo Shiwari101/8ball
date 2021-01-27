@@ -31,7 +31,7 @@ class Level(commands.Cog):
     @commands.command()
     async def predict(self, ctx, member:discord.Member="_"):
         optmist_list = list(range(500, 1000))
-        pessimist_list = list(range(100, 400))
+        pessimist_list = list(range(100, 300))
         xp = cactus.userxp(ctx.author.id if member == "_" else ctx.author.id)
         xp_month = cactus.usermonthly(ctx.author.id if member == "_" else ctx.author.id)
         data = xp
@@ -48,9 +48,7 @@ class Level(commands.Cog):
         random_optmist_num = random.choice(optmist_list)
 
         if int_xp_month > 500:
-            await ctx.send(f'You are active. Keep it that way! you earned {int_xp_month} XP in tis month so far, if you keep that way you gain maybe {random_optmist_num} XP')
-        elif random_optmist_num >= int_nextxp:
-            await ctx.send(f'It looks like you will gain one level! and gain level {intlevel + 1} in no time. You have {int_currentxp} currently. You have to get more just {int_nextxp - int_currentxp} xp to get to level {intlevel + 1}')
+            await ctx.send(f'Hey! You are active. Keep it that way! You earned {int_xp_month} XP this monthc so far. If you keep that way, maybe you will get {random_optmist_num} XP')
         else:
             pass
 
@@ -58,7 +56,12 @@ class Level(commands.Cog):
         random_pessimist_num = random.choice(pessimist_list)
         
         if int_xp_month < 500:
-            await ctx.send(f'You are not that active try to talk more in chat!, you earned {int_xp_month} in tis month so far, if you keep that way you gain maybe {random_pessimist_num} XP, if you be more active you should get {random_optmist_num}')
+            await ctx.send(f'''You are not that active. Try to talk more in  the chat! You've earned only {int_xp_month} so far, If you keep being not that active, You will maybe just earn {random_pessimist_num} XP a month. If you gete more active you should get more XP''')
+        else:
+            pass
+
+        if random_optmist_num >= int_nextxp:
+            await ctx.send(f'It looks like you will get level {intlevel + 1}. You have {int_currentxp} XP currently. You have to get more just {int_nextxp - int_currentxp} xp to get level {intlevel + 1}')
         else:
             pass
 
