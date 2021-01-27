@@ -48,7 +48,7 @@ class Level(commands.Cog):
         random_optmist_num = random.choice(optmist_list)
 
         if int_xp_month > 500:
-            await ctx.send(f'Hey! You are active. Keep it that way! You earned {int_xp_month} XP this monthc so far. If you keep that way, maybe you will get {random_optmist_num} XP')
+            await ctx.send(f'Hey! You are active. Keep it that way! You earned {int_xp_month} XP this month so far. If you keep that way, you will get {random_optmist_num} XP or even more.')
         else:
             pass
 
@@ -56,7 +56,7 @@ class Level(commands.Cog):
         random_pessimist_num = random.choice(pessimist_list)
         
         if int_xp_month < 500:
-            await ctx.send(f'''You are not that active. Try to talk more in  the chat! You've earned only {int_xp_month} so far, If you keep being not that active, You will maybe just earn {random_pessimist_num} XP a month. If you gete more active you should get more XP''')
+            await ctx.send(f'''You are not that active. Try to talk more in  the chat! You've earned only {int_xp_month} so far, If you keep unactive, You might just earn {random_pessimist_num} XP a month. If you gete more active you should get more XP''')
         else:
             pass
 
