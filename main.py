@@ -8,7 +8,7 @@ cactus = CactusAPI("9RJWwx2emnj9pRrjXUzpaTByBLYvazrzjftYw3UHgmZKR")
 
 client = commands.Bot(command_prefix = '.')
 
-##LINKU STARTOO
+#                                               COMEÇO
 
 @client.event
 async def on_ready():
