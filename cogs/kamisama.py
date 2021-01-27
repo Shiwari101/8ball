@@ -7,9 +7,6 @@ client = commands.Bot(command_prefix = '$')
 class Kamisama(commands.Cog):
     def __init__(self, client):
         self.client = client
-    @commands.Cog.listener()
-    async def on_ready(self):
-        print(f'Ok {self.client.user.name} is Online')
     
     @commands.command()
     async def kamisama(self, ctx, *, question):

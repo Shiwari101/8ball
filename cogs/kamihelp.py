@@ -21,7 +21,10 @@ class Kamihelp(commands.Cog):
     You can Flip a coin, Roll a Dice and Play Rock Paper Scissors too.
     You can use: `.flip` `.dice` `.jokenpo`
 
-    Fun fact we have a fun fact command too! Just type `.funfact` to get one! 
+    Fun fact we have a fun fact command too! Just type `.funfact` to get one!
+
+    Kamisama is working on having a integration with Cactus bot.
+    So you can use the command `.level` to check your level and how many xp you have left to level up!
                                                 
     If you have any question or suggestions you can DM Shiwa. Thanks for using kamisama!''', colour = discord.Colour.blue())
         await ctx.send(embed=embed)
