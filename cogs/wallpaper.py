@@ -26,7 +26,7 @@ class Wallpaper(commands.Cog):
         subreddit = reddit.subreddit("wallpaper")
         all_subs = []
 
-        top = subreddit.get_top_from_week(limit=100)
+        top = subreddit.top("week", limit=100)
 
         for submission in top:
             all_subs.append(submission)
