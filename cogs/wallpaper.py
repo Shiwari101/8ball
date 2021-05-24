@@ -26,9 +26,9 @@ class Wallpaper(commands.Cog):
         subreddit = reddit.subreddit("wallpaper")
         all_subs = []
 
-        hot = subreddit.hot(limit=1000)
+        new = subreddit.new(limit=100)
 
-        for submission in hot:
+        for submission in new:
             all_subs.append(submission)
 
         random_sub = random.choice(all_subs)
