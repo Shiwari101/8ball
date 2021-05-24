@@ -26,7 +26,7 @@ class Wallpaper(commands.Cog):
         subreddit = reddit.subreddit("wallpaper")
         all_subs = []
 
-        hot = subreddit.hot(limit=10000)
+        hot = subreddit.hot(limit=1000)
 
         for submission in hot:
             all_subs.append(submission)
