@@ -2,11 +2,11 @@ import discord
 from discord.ext import commands
 from modules.cactusapi import *
 
-extensions = ['kamisama', 'funfact', 'minigames', 'hey', 'ping', 'kamihelp', 'level']
+extensions = ['kamisama', 'funfact', 'minigames', 'hey', 'ping', 'kamihelp', 'level', 'wallpaper']
 
 cactus = CactusAPI("9RJWwx2emnj9pRrjXUzpaTByBLYvazrzjftYw3UHgmZKR")
 
-client = commands.Bot(command_prefix = '.')
+client = commands.Bot(command_prefix = 'k.')
 
 #                                               COMEÇO
 
