@@ -4,7 +4,7 @@ from modules.cactusapi import *
 
 intents = discord.Intents.default()
 intents.members = True
-extensions = ['kamisama', 'funfact', 'minigames', 'hey', 'ping', 'kamihelp', 'level', 'wallpaper', 'Moderation']
+extensions = ['kamisama', 'funfact', 'minigames', 'hey', 'ping', 'kamihelp', 'level', 'wallpaper', 'Moderation', 'welcome']
 cactus = CactusAPI("9RJWwx2emnj9pRrjXUzpaTByBLYvazrzjftYw3UHgmZKR")
 client = commands.Bot(command_prefix = 'k.', intents=intents)
 
