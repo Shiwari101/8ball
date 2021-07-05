@@ -23,8 +23,8 @@ class Welcome(commands.Cog):
                                     We have some roles that you can get in <#699319394995535882> with these you can be pinged when we do events for each thing!''', colour=0xFF5F7A)
         embed.set_thumbnail(url=member.avatar_url)
         embed.set_footer(text="*Thanks for joining us and be sure to say hello!*")
-        await client.channel.send("<@&736177693892280420>, say hi to our new member!")
-        await client.channel.send(embed=embed)
+        await channel.send("<@&736177693892280420>, say hi to our new member!")
+        await channel.send(embed=embed)
 
 
 def setup(client):
