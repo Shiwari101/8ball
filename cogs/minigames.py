@@ -25,32 +25,5 @@ class Minigames(commands.Cog):
         await asyncio.sleep(5)
         await ctx.send(f'{ctx.author.name}\nYou rolled {random.choice(dice)}')
 
-    @commands.command()
-    async def jokenpo(self, ctx, member_1:discord.Member, member_2:discord.Member):
-
-        await member_1.send(f'You started a Jokenpo game, What do you chose?')
-        await member_2.send(f'Hey {member_1.name} started a jokenpo game with you {member_2.name}, what you chose?')
-
-        def check(m):
-                return m.author == ctx.author
-
-        msg1 = await self.client.wait_for('message', check=check)
-            
-        def check2(m):
-                return m.author == member_2
-
-        msg2 = await self.client.wait_for('message', check=check2)
-
-        print(msg1.content)
-        print(msg2.content)
-        await ctx.send('Jo!')
-        await asyncio.sleep(1)
-        await ctx.send('ken!')
-        await asyncio.sleep(1)
-        await ctx.send('po!')
-        await asyncio.sleep(1)
-        await ctx.send(f'{member_1.name} choosed {msg1.content} and {member_2.name} {msg2.content}')
-
-
 def setup(client):
     client.add_cog(Minigames(client))

@@ -18,4 +18,4 @@ async def on_ready():
     print(f'Ok {client.user.name} is Online')
 
 
-client.run('NzU4MDI3MTQ2ODUyODI3Mzk3.X2o9yw.A9HwTfZKQNLPEMQ7nW1nWX8bzzU')
+client.run('NzU4MDI3MTQ2ODUyODI3Mzk3.X2o9yw.603FhPN4IBaEgU1Ckx4wpH4rFOQ')
