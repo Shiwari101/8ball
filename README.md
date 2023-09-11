@@ -1,4 +1,4 @@
-# Kamisama
+# Kamisama (no longer maintained)
 
 Kamisama Bot is a simple discord Bot writing in Python Deployed at Heroku
 
